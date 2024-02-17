@@ -1,5 +1,5 @@
-q1ss: Affine Partition Hashes
-=================================
+Quantum 1-Shot Signatures
+=========================
 
 .. image:: https://img.shields.io/badge/python-3.10+-green.svg
     :target: https://docs.python.org/3.10/

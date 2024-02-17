@@ -27,6 +27,9 @@ Quantum 1-Shot Signatures
 
 
 This library contains experimental implementations of quantum one-shot signatures by authors from the QSig Commission and other contributors, with special focus on blockchain technology.
+Currently, the main focus is on implementation, compilation and obfuscation of affine partition functions, originally introduced by `"One-shot Signatures and Applications to Hybrid Quantum/Classical Authentication" <https://eprint.iacr.org/2020/107>`_.
+
+
 
 .. contents::
 

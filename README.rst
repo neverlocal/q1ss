@@ -66,8 +66,11 @@ If `networkx <https://networkx.org/documentation/stable/>`_ and `matplotlib <htt
 Usage
 -----
 
-Coming soon.
+Short usage examples for the README are coming soon.
 
+The `notebooks <./notebooks>`_ folder contains the following Jupyter notebooks, exemplifying various features of the library:
+
+1. The `AffinePartitions <./notebooks/AffinePartitions.ipynb>`_ notebook contains examples related to the construction of affine partition functions.
 
 API
 ---

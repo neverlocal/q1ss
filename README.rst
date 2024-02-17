@@ -5,12 +5,12 @@ q1ss: Affine Partition Hashes
     :target: https://docs.python.org/3.10/
     :alt: Python versions
 
-.. image:: https://img.shields.io/pypi/v/aphash.svg
-    :target: https://pypi.python.org/pypi/aphash/
+.. image:: https://img.shields.io/pypi/v/q1ss.svg
+    :target: https://pypi.python.org/pypi/q1ss/
     :alt: PyPI version
 
-.. image:: https://img.shields.io/pypi/status/aphash.svg
-    :target: https://pypi.python.org/pypi/aphash/
+.. image:: https://img.shields.io/pypi/status/q1ss.svg
+    :target: https://pypi.python.org/pypi/q1ss/
     :alt: PyPI status
 
 .. image:: http://www.mypy-lang.org/static/mypy_badge.svg

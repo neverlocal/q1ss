@@ -76,7 +76,7 @@ being selected when passed to :meth:`binmat.__getitem__`.
 @final
 class binmat(bintensor):
     r"""
-    A mutable matrix over the field :math:`\mathbb{Z}_2`.
+    A mutable binary matrix.
     """
 
     class NotInvertibleError(ZeroDivisionError):
@@ -857,8 +857,8 @@ class binmat(bintensor):
     @property
     def inverse(self) -> binmat:
         r"""
-        The left inverse of this matrix over the field :math:`\mathbb{Z}_2`,
-        or :obj:`None` if the matrix is not invertible.
+        The left inverse of this binary matrix, or :obj:`None` if the matrix is
+        not invertible modulo 2.
         """
         n, m = self.shape
         if n != m:
@@ -880,7 +880,7 @@ class binmat(bintensor):
     def rcef(self) -> binmat:
         r"""
         Returns the reduced column echelon form (RCEF) of this matrix,
-        computed over the field :math:`\mathbb{Z}_2`.
+        computed modulo 2.
         """
 
         if self.__in_rcef:
@@ -895,7 +895,7 @@ class binmat(bintensor):
     def rref(self) -> binmat:
         r"""
         Returns the reduced row echelon form (RREF) of this matrix,
-        computed over the field :math:`\mathbb{Z}_2`.
+        computed modulo 2.
         """
 
         if self.__in_rref:
@@ -910,7 +910,7 @@ class binmat(bintensor):
     def ext_rcef(self) -> tuple[binmat, binmat]:
         r"""
         Returns the reduced column echelon form (RCEF) ``r`` of this matrix,
-        computed over the field :math:`\mathbb{Z}_2`, together with the matrix
+        computed modulo 2, together with the matrix
         ``m`` such that ``m@self == r``.
 
         If the matrix is invertible, ``r`` is the identity and ``m`` is its
@@ -932,8 +932,8 @@ class binmat(bintensor):
     def ext_rref(self) -> tuple[binmat, binmat]:
         r"""
         Returns the reduced row echelon form (RREF) ``r`` of this matrix,
-        computed over the field :math:`\mathbb{Z}_2`, together with the matrix
-        ``m`` such that ``m@self == r``.
+        computed modulo 2, together with the matrix ``m``
+        such that ``m@self == r``.
 
         If the matrix is invertible, ``r`` is the identity and ``m`` is its
         inverse.
@@ -1002,8 +1002,8 @@ class binmat(bintensor):
 
     def __matmul__(self, other: binvec | binmat) -> binvec | binmat:
         r"""
-        Performs matrix-vector or matrix-matrix multiplication over the
-        field :math:`\mathbb{Z}_2`, depending on the type of ``other``.
+        Performs binary matrix-vector or matrix-matrix multiplication,
+        depending on the type of ``other``.
 
         :raises ShapeError: if the intermediate dimensions don't match.
 
@@ -1019,8 +1019,7 @@ class binmat(bintensor):
 
     def __imatmul__(self, other: binmat) -> binmat:  # type: ignore[misc]
         r"""
-        Performs inplace matrix-matrix multiplication over the
-        field :math:`\mathbb{Z}_2`.
+        Performs inplace binary matrix-matrix multiplication.
 
         :raises ShapeError: if the intermediate dimensions don't match.
 

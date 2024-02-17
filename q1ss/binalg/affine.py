@@ -53,8 +53,8 @@ and :meth:`AffineSubspace.draw_many`.
 
 @final
 class AffineSubspace:
-    r"""
-    A linear or affine subspace of a space over the field :math:`\mathbb{Z}_2`,
+    """
+    A linear or affine subspace of a binary vector space,
     represened by:
 
     - a matrix whose rows span the (underlying) linear subspace
@@ -485,7 +485,7 @@ class AffineSubspace:
         )
 
     def transform(
-        self, matrices: Sequence[binmat], *, partial: bool = False
+        self, matrices: binmat|Sequence[binmat], *, partial: bool = False
     ) -> AffineSubspace:
         """
         Transforms the subspace by the given matrices, applied in order
@@ -495,7 +495,10 @@ class AffineSubspace:
         they are applied to the subspace spanned by the first ``k`` standard
         ambient vectors.
         """
-        assert validate(matrices, Sequence[binmat])
+        if isinstance(matrices, binmat):
+            matrices = (matrices,)
+        else:
+            assert validate(matrices, Sequence[binmat])
         if partial:
             assert all(self.__up_to_same_ambient_dim(mat) for mat in matrices)
         else:
@@ -697,9 +700,9 @@ class AffineSubspace:
         subsp_kwargs: Sequence[Mapping[str, Any]] | None,
     ) -> Literal[True]:
         assert validate(subspaces, Sequence[AffineSubspace])
-        if colors is not None and len(colors) != len(subspaces):
+        if colors is not None and len(colors) < len(subspaces):
             raise ValueError(
-                f"Expected {len(subspaces)} colors, found {len(colors)}."
+                f"Expected >= {len(subspaces)} colors, found {len(colors)}."
             )
         n = len(axes)
         for subsp in subspaces:

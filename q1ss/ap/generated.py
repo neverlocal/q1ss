@@ -109,6 +109,11 @@ class APMatrixGen(ABC):
         assert mat.shape == (n - k, n - k)
         return mat, mat_inv
 
+    def __repr__(self) -> str:
+        n, k = self.ambient_dim, self.max_label_dim
+        cls = type(self)
+        return f"<{cls.__name__}: {n}-dim space, up to {k}-dim labels>"
+
     @abstractmethod
     def _get_matrix(self, label: binvec) -> tuple[binmat, binmat]:
         """

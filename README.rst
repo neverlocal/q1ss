@@ -37,7 +37,7 @@ The library is currently in pre-alpha development, but you can install the lates
 
 .. code-block:: console
 
-    $ pip install --upgrade q1ss
+    $ pip install -U q1ss
 
 Low-level operations are vectorised using `numpy <https://numpy.org/doc/stable/>`_, which is a required dependency of this library.
 
@@ -45,13 +45,19 @@ If `numba <https://numba.readthedocs.io/en/stable/>`_ is installed, it is automa
 
 .. code-block:: console
 
-    $ pip install --upgrade numba
+    $ pip install -U numba
 
 If `cupy <https://docs.cupy.dev/en/stable/>`_ is installed additionally to `numba <https://numba.readthedocs.io/en/stable/>`_, GPU acceleration can be used for certain operations:
 
 .. code-block:: console
 
-    $ pip install --upgrade cupy
+    $ pip install -U cupy
+
+If `networkx <https://networkx.org/documentation/stable/>`_ and `matplotlib <https://matplotlib.org/>`_ are installed, affine subspaces and affine partition functions can be drawn for easier visualisation:
+
+.. code-block:: console
+
+    $ pip install -U networkx matplotlib
 
 
 Usage

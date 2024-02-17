@@ -38,7 +38,7 @@ _ScalarType = TypeVar("_ScalarType", bound=np.generic)
 
 class bintensor:
     r"""
-    Abstract base class for mutable tensors over the field :math:`\mathbb{Z}_2`.
+    Abstract base class for mutable binary tensors.
     """
 
     class ShapeError(ValueError):

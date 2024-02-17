@@ -250,6 +250,11 @@ class AP(ABC):
             return False
         return all(s == t for s, t in zip(self, other))
 
+    def __repr__(self) -> str:
+        m, n, k = self.subsp_dim, self.ambient_dim, self.label_dim
+        cls = type(self)
+        return f"<{cls.__name__}: {n}-dim space, {m}-dim subspaces, {k}-dim labels>"
+
     @abstractmethod
     def _get_subspace(self, label: binvec) -> AffineSubspace:
         """

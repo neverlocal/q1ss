@@ -48,7 +48,7 @@ Type alias for a bit value.
 @final
 class binvec(bintensor):
     r"""
-    A mutable vector over the field :math:`\mathbb{Z}_2`.
+    A mutable binary vector.
     """
 
     @staticmethod
@@ -315,8 +315,7 @@ class binvec(bintensor):
 
     def __matmul__(self, other: binvec | binmat) -> Bit | binvec:
         r"""
-        Vector-vector inner product or vector-matrix multiplication over the
-        field :math:`\mathbb{Z}_2`.
+        Binary vector-vector inner product or vector-matrix multiplication.
 
         :raises ShapeError: if the intermediate dimensions don't match.
 
@@ -335,7 +334,7 @@ class binvec(bintensor):
 
     def __imatmul__(self, other: binmat) -> binvec:  # type: ignore[misc]
         r"""
-        Inplace vector-matrix multiplication over the field :math:`\mathbb{Z}_2`
+        Inplace binary vector-matrix multiplication.
 
         :raises ShapeError: if the intermediate dimensions don't match.
 

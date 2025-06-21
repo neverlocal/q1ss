@@ -24,8 +24,8 @@ import sphinx_rtd_theme # type: ignore
 # -- Project information -----------------------------------------------------
 
 project = 'q1ss'
-copyright = '2023, Hashberg Ltd and 20squares UG'
-author = 'Hashberg Ltd and 20squares UG'
+copyright = '2025, NeverLocal Ltd'
+author = 'NeverLocal Ltd'
 
 
 # The version info for the project you"re documenting, acts as replacement for
@@ -33,9 +33,9 @@ author = 'Hashberg Ltd and 20squares UG'
 # built documents.
 #
 # The full version, including alpha/beta/rc tags.
-release = "0.0.1"
+release = "0.1.0"
 # The short X.Y version.
-version = "0.0.1"
+version = "0.1.0"
 
 
 # -- General configuration ---------------------------------------------------

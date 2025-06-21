@@ -16,7 +16,7 @@ obfuscation of binary circuits and quantum oracles, as well as quantum
 resource estimation.
 
 
-GitHub repo: https://github.com/The-QSig-Commission/q1ss
+GitHub repo: https://github.com/neverlocal/q1ss
 
 
 .. toctree::

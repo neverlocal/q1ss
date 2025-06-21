@@ -1,7 +1,7 @@
 Quantum 1-Shot Signatures
 =========================
 
-|Python version| |PyPI version| |PyPI status| |Mypy checked| |Documentation status| |Standard readme|
+|Python version| |PyPI version| |PyPI status| |Mypy checked| |Documentation status|
 
 .. |Python version| image:: https://img.shields.io/badge/python-3.10+-green.svg
     :target: https://docs.python.org/3.10/

@@ -3,7 +3,7 @@ name = "q1ss"
 version = "0.1.0"
 authors = [{ name = "NeverLocal" }]
 description = "Implementation of quantum 1-shot signatures based on affine partition functions."
-readme = "README.md"
+readme = "README.rst"
 requires-python = ">=3.10"
 license = "LGPL-3.0"
 license-files = ["LICENSE"]

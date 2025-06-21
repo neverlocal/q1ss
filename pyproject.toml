@@ -12,6 +12,7 @@ dependencies = [
     "typing-validation>=1.2.12",
     "typing-extensions>=4.6.0",
     "optmanage >= 1.1.1",
+    "paulicirc >= 0.1.0",
 ]
 classifiers = [
     "Programming Language :: Python :: 3",

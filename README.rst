@@ -19,16 +19,12 @@ Quantum 1-Shot Signatures
     :target: https://github.com/python/mypy
     :alt: Checked with Mypy
 
-.. |Documentation status| image:: https://readthedocs.org/projects/aphash/badge/?version=latest
-    :target: https://aphash.readthedocs.io/en/latest/?badge=latest
+.. |Documentation status| image:: https://readthedocs.org/projects/q1ss/badge/?version=latest
+    :target: https://q1ss.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 
-.. |Standard readme| image:: https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square
-    :target: https://github.com/RichardLitt/standard-readme
-    :alt: standard-readme compliant
 
-
-This library contains experimental implementations of quantum one-shot signatures by authors from the QSig Commission and other contributors, with special focus on blockchain technology.
+This library contains experimental implementations of quantum one-shot, with special focus on blockchain technology.
 Currently, the main focus is on implementation, compilation and obfuscation of affine partition functions, originally introduced by `"One-shot Signatures and Applications to Hybrid Quantum/Classical Authentication" <https://eprint.iacr.org/2020/107>`_.
 
 
@@ -83,4 +79,4 @@ For the full API documentation, see https://q1ss.readthedocs.io/
 License
 -------
 
-`LGPL © Hashberg Ltd and 20squares UG. <LICENSE>`_
+`LGPL © NeverLocal Ltd. <LICENSE>`_

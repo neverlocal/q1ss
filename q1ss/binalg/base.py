@@ -360,10 +360,22 @@ class bintensor:
             return h
 
     @overload
-    def __array__(self, dtype: None = None, /) -> npt.NDArray[np.uint8]: ...
+    def __array__(
+        self,
+        dtype: None = None,
+        copy: bool | None= None,
+    /) -> npt.NDArray[np.uint8]: ...
 
     @overload
-    def __array__(self, dtype: _ScalarType, /) -> npt.NDArray[_ScalarType]: ...
+    def __array__(
+        self,
+        dtype: _ScalarType,
+        copy: bool | None= None,
+    /) -> npt.NDArray[_ScalarType]: ...
 
-    def __array__(self, dtype: _ScalarType | None = None) -> Any:
-        return self._data.__array__(dtype)
+    def __array__(
+        self,
+        dtype: _ScalarType | None = None,
+        copy: bool | None= None,
+    /) -> Any:
+        return self._data.__array__(dtype, copy)

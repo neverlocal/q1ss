@@ -108,7 +108,8 @@ skip_missing_references: set[str] = {
     "networkx.draw_networkx",
     "np.random.Generator",
     "npt.ArrayLike",
-    "numpy.uint8"
+    "numpy.uint8",
+    "Option"
 }
 
 def on_missing_reference(app: Sphinx, env: BuildEnvironment, node: pending_xref, contnode: Any) -> Any:

@@ -20,6 +20,7 @@ Utility functions and classes.
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301
 # USA
 
+from __future__ import annotations
 from .options import options
 
 __all__ = ("options",)

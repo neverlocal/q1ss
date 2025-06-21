@@ -348,7 +348,7 @@ class binvec(bintensor):
         if not isinstance(other, binmat):
             return NotImplemented
         assert self.__has_compatible_matmul_shape(other)
-        self._data = (self._data @ other._data) % 2  # type: ignore
+        self._data = (self._data @ other._data) % 2
         self._postprocess_mutation()
         return self
 
@@ -376,6 +376,8 @@ class binvec(bintensor):
         :meta public:
         """
         n = len(self)
+        if n == 0:
+            return 0
         return int(
             np.sum(self._data * 2 ** (n - 1 - np.arange(n, dtype=np.uint64)))
         )

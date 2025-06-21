@@ -1,13 +1,49 @@
-# pyproject.toml
-[build-system]
-requires = [
-    "setuptools>=63.4.3", # see https://github.com/python/mypy/issues/13392#issuecomment-1212727421
-    "wheel",
-    "setuptools_scm>=6.2"
+[project]
+name = "q1ss"
+version = "0.1.0"
+authors = [{ name = "NeverLocal" }]
+description = "Implementation of quantum 1-shot signatures based on affine partition functions."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "LGPL-3.0"
+license-files = ["LICENSE"]
+dependencies = [
+    "numpy>=2.2.6",
+    "typing-validation>=1.2.12",
+    "typing-extensions>=4.6.0",
+    "optmanage >= 1.1.1",
 ]
-build-backend = "setuptools.build_meta"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.10",
+    "Natural Language :: English",
+    "Typing :: Typed",
+]
 
-# see https://github.com/pypa/setuptools_scm
-[tool.setuptools_scm]
-version_scheme = "post-release"   # use post-release scheme (default is pre-release of next version)
-local_scheme = "no-local-version" # interferes with PyPI
+[project.urls]
+Documentation = "https://q1ss.readthedocs.io"
+Repository = "https://github.com/neverlocal/q1ss"
+Issues = "https://github.com/neverlocal/q1ss/issues"
+
+[build-system]
+requires = ["hatchling == 1.26.3"]
+build-backend = "hatchling.build"
+
+[tool.black]
+target-version = ["py313"]
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+
+[tool.pyright]
+typeCheckingMode = "off"
+reportInvalidTypeForm = false
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
